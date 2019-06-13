@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>jQuery Mobile</title>
-    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <style>
@@ -15,6 +15,58 @@
         .picture li img { display:block; width:50%;  height:auto;}
         .picture li img:hover { display:block; width:100%;  height:auto;}
     </style>
+
+
+    <meta charset="utf-8">
+    <title>jQuery</title>
+    <style>
+        div { margin: 10px; padding: 10px; border: solid thin red; }
+    </style>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script>
+        $(document).ready( function() {
+            // show/hide/toggle 효과
+            $('#hide').click(function() {
+                $('input[name="text1"]').hide(600);
+            });
+            $('#show').click(function() {
+                $('input[name="text1"]').show(1000);
+            });
+            $('#toggle').click(function() {
+                $('input[name="text1"]').toggle(2000);
+            });
+        });
+    </script>
+
+    <meta charset="utf-8">
+    <title>jQuery</title>
+    <style>
+        div { margin: 5px; padding: 5px; border: solid thin red; }
+        #img2 { display: none; }
+    </style>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script>
+        $(document).ready( function() {
+            //	fadeOut/fadeIn/fadeToggle 효과
+            $('#fadeOut').click(function() {
+                $('#img1').fadeOut(2000, function() {
+                    $('#img2').fadeIn(100);
+                });
+            });
+            $('#fadeIn').click(function() {
+                $('#img2').fadeOut(2000, function() {
+                    $('#img1').fadeIn(100);
+                });
+            });
+            $('#fadeToggle').click(function() {
+                $('#img1').fadeToggle(1000);
+            });
+        });
+    </script>
+</head>
+
+
+
 </head>
 
 <body>
@@ -31,7 +83,7 @@
                 <li><a href="#wizard3-1" data-rel="dialog">맥도날드 음악</a></li>
                 <li><a href="#gallery">맥도날드 사진</a></li>
                 <li><a href="#link">맥도날드 참고링크</a></li>
-                <li><a href="mcareer.html" target="_blank">201858049조수아 이력서</a></li>
+                <li><a href="201858049 조수아/mcareer.html" target="_blank">201858049조수아 이력서</a></li>
             </ul>
         </div>
         <div data-role="footer" data-position="fixed" data-theme="b">
@@ -126,6 +178,13 @@
         </div>
         <div data-role="content">
             <ul class="picture">
+
+                fadeOut/fadeIn/fadeToggle 효과
+                <button id="fadeOut"> fadeOut </button>
+                <button id="fadeIn"> fadeIn </button>
+                <button id="fadeToggle"> fadeToggle </button>
+
+
                 <li><a href="macp1.png" rel="external"><img src="macp1.png" /></a></li>
                 <li><a href="macp2.png" rel="external"><img src="macp2.png" /></a></li>
                 <li><a href="macp3.png" rel="external"><img src="macp3.png" /></a></li>
@@ -158,7 +217,7 @@
                         <img class="portal" src="mac.jpg" width="40" height="40" alt="위키백과 맥도날드 이동"/><h3>- 위키백과 맥도날드</h3>
                     </a><br>
                     <a href="https://terms.naver.com/entry.nhn?docId=2697886&cid=43168&categoryId=43168">
-                        <img class="portal" src="mac.jpg" width="40" height="40" alt="지식백과 맥도날드 이동"/><h3>- 지식백과 맥도날</h3>
+                        <img class="portal" src="mac.jpg" width="40" height="40" alt="지식백과 맥도날드 이동"/><h3>- 지식백과 맥도날드</h3>
                     </a><br>
                 </div>
             </div>
